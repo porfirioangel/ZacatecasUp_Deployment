@@ -81,6 +81,11 @@ sudo usermod -a -G www-data ubuntu
 sudo chown -R www-data:www-data /home/ubuntu/.composer/
 ```
 
+**Hacer propietario a www-data de la carpeta de scripts:**
+```
+sudo chown -R www-data:www-data /home/ubuntu/ZacatecasUp/
+```
+
 ## Acciones en el equipo local:
 
 **Conectarse al servidor por ssh:**
@@ -95,4 +100,10 @@ scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" hook.php ubuntu@
 scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" deploy.sh ubuntu@ec2-18-221-199-5.us-east-2.compute.amazonaws.com:~/ZacatecasUp
 
 scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" create_user_and_database.sql ubuntu@ec2-18-221-199-5.us-east-2.compute.amazonaws.com:~/ZacatecasUp
+
+scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" email.html ubuntu@ec2-18-221-199-5.us-east-2.compute.amazonaws.com:~/ZacatecasUp
+
+scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" notification_email.py ubuntu@ec2-18-221-199-5.us-east-2.compute.amazonaws.com:~/ZacatecasUp
+
+scp -i "/home/porfirio/AWS_Keys/Porfirio/ubuntu_server_key.pem" send_email.sh ubuntu@ec2-18-221-199-5.us-east-2.compute.amazonaws.com:~/ZacatecasUp
 ```

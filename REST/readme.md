@@ -10,6 +10,7 @@ de UP.
 - PHP 7
 - Composer
 - MySQL
+- Python 3
 
 ## Configuración del lado del servidor
 

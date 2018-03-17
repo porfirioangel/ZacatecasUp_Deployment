@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "----------------------------------------------"
-echo "$(date)"
+echo "REST $(date)"
 echo "----------------------------------------------"
 echo ""
 
@@ -47,13 +47,15 @@ echo "Setting project key..."
 echo ""
 php artisan key:generate
 
+echo ""
 echo "Creating MySQL database and user..."
 echo ""
 cd /home/ubuntu/ZacatecasUp
-mysql -u root --password=padsMysql < create_user_and_database.sql
+mysql -u root --password=ZacatecasUp < create_user_and_database.sql
 echo ""
 
 cd -
+echo ""
 echo "Executing database migrations..."
 echo ""
 php artisan migrate:fresh --seed

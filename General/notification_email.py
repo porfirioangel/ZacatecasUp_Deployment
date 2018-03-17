@@ -23,7 +23,7 @@ recipient = "porfirioads@gmail.com"
 
 #Enter the headers of the email
 headers = "\r\n".join(["from: " + username,
-                       "subject: RESTHook Executed",
+                       "subject: Hook Executed",
                        "to: " + recipient,
                        "mime-version: 1.0",
                        "content-type: text/html"])

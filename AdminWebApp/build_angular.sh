@@ -5,7 +5,8 @@ DIST_PATH="/var/www/html/ZacatecasUp"
 cd $DIST_PATH
 
 for i in *;do
-    if [ "$i" != "ZacatecasUp_REST" ] && [ "$i" != "ZacatecasUp_WebApp" ]; then
+    if [ "$i" != "ZacatecasUp_REST" ] && [ "$i" != "ZacatecasUp_WebApp" ] && 
+        [ "$i" != "hook_rest.php" ] && [ "$i" != "hook_admin.php" ]; then
         rm -r "$i"
     fi
 done

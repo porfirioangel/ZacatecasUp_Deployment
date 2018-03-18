@@ -126,6 +126,21 @@ npm install -g @angular/cli@latest
 npm install --save-dev @angular/cli@latest
 ```
 
+### Configuración de apache
+
+**Crear el siguiente .htaccess en la carpeta del proyecto:**
+
+```bash
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+    RewriteRule ^(.*) index.html [NC,L]
+</IfModule>
+```
+
 ## Solución de errores
 
 **Module build failed: Error: ENOENT: no such file or directory:**

@@ -51,6 +51,14 @@ if [ -f $ENVIRONMENT_PROD_TXT ]; then
    mv $ENVIRONMENT_PROD_TXT $ENVIRONMENT_PROD_TS
 fi
 
+sed -i "s,host: '',host: 'http://18.221.199.5/ZacatecasUp/ZacatecasUp_REST/public',g" $ENVIRONMENT_TS
+sed -i "s,api: '',api: 'http://18.221.199.5/ZacatecasUp/ZacatecasUp_REST/public/api/',g" $ENVIRONMENT_TS
+sed -i "s,googleApi: '',googleApi: 'AIzaSyBHd3sWn7KjUmYTe3pQ6RYlmJZxb-sZAfI',g" $ENVIRONMENT_TS
+
+sed -i "s,host: '',host: 'http://www.upeando.com/ZacatecasUp/ZacatecasUp_REST/public',g" $ENVIRONMENT_PROD_TS
+sed -i "s,api: '',api: 'http://www.upeando.com/ZacatecasUp/ZacatecasUp_REST/public/api/',g" $ENVIRONMENT_PROD_TS
+sed -i "s,googleApi: '',googleApi: 'AIzaSyBHd3sWn7KjUmYTe3pQ6RYlmJZxb-sZAfI',g" $ENVIRONMENT_PROD_TS
+
 ssh -i "/home/ubuntu/ZacatecasUp/ubuntu_upeando_key.pem" ubuntu@18.219.193.113 "sh ~/ZacatecasUp/build_angular.sh"
 
 echo "End"

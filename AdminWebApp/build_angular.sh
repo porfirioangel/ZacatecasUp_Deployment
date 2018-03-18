@@ -15,7 +15,7 @@ cd /var/www/html/ZacatecasUp/ZacatecasUp_WebApp
 
 echo "Building web app..."
 echo ""
-~/.npm-global/bin/ng build --base-href /ZacatecasUp/
+~/.npm-global/bin/ng build --base-href /ZacatecasUp/ --env prod
 echo ""
 
 echo "Moving the dist web app..."
